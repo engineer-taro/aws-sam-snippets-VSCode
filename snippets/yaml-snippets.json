@@ -1,0 +1,43 @@
+{
+  "sam-lambda-function": {
+    "prefix": "sam-lambda-function",
+    "body": [
+      "${1:SAMLambdaFunction}:",
+      "  Type: AWS::Serverless::Function",
+      "  Properties:",
+      "    Architectures: List",
+      "    AssumeRolePolicyDocument: JSON",
+      "    AutoPublishAlias: String",
+      "    AutoPublishCodeSha256: String",
+      "    CodeSigningConfigArn: String",
+      "    CodeUri: String | FunctionCode",
+      "    DeadLetterQueue: Map | DeadLetterQueue",
+      "    DeploymentPreference: DeploymentPreference",
+      "    Description: String",
+      "    Environment: Environment",
+      "    EventInvokeConfig: EventInvokeConfiguration",
+      "    Events: EventSource",
+      "    FileSystemConfigs: List",
+      "    FunctionName: String",
+      "    Handler: String",
+      "    ImageConfig: ImageConfig",
+      "    ImageUri: String",
+      "    InlineCode: String",
+      "    KmsKeyArn: String",
+      "    Layers: List",
+      "    MemorySize: Integer",
+      "    PackageType: String",
+      "    PermissionsBoundary: String",
+      "    Policies: String | List | Map",
+      "    ProvisionedConcurrencyConfig: ProvisionedConcurrencyConfig",
+      "    ReservedConcurrentExecutions: Integer",
+      "    Role: String",
+      "    Runtime: String",
+      "    Tags: Map",
+      "    Timeout: Integer",
+      "    Tracing: String",
+      "    VersionDescription: String",
+      "    VpcConfig: VpcConfig"
+    ]
+  }
+}
