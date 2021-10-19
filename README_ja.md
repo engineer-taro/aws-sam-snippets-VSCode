@@ -1,5 +1,3 @@
-[日本語 README]()
-
 # aws-sam-snippets-VSCode
 
 こちらのリポジトリは VSCode で SAM のテンプレートを快適に記述するために開発中のリポジトリです。
