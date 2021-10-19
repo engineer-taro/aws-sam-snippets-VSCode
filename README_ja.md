@@ -21,3 +21,7 @@ Properties のプロパティ名までを対象とする。
 ## フェーズ 3
 
 [CorsConfiguration](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-corsconfiguration.html)頻繁に記述しないものを対象にする。
+
+## フェーズ 4 以降
+
+順次必要な機能を追加していく。
