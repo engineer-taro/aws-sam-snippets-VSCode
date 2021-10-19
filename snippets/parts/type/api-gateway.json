@@ -1,0 +1,34 @@
+{
+  "AWS::Serverless::Api": {
+    "prefix": "sam-api-gateway",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-api.html",
+    "body": [
+      "${1:SampleApi}:",
+      "  Type: AWS::Serverless::Api",
+      "  Properties:",
+      "    AccessLogSetting: AccessLogSetting",
+      "    Auth: ApiAuth",
+      "    BinaryMediaTypes: List",
+      "    CacheClusterEnabled: Boolean",
+      "    CacheClusterSize: String",
+      "    CanarySetting: CanarySetting",
+      "    Cors: String | CorsConfiguration",
+      "    DefinitionBody: String",
+      "    DefinitionUri: String | ApiDefinition",
+      "    Description: String",
+      "    Domain: DomainConfiguration",
+      "    EndpointConfiguration: EndpointConfiguration",
+      "    GatewayResponses: Map",
+      "    MethodSettings: MethodSettings",
+      "    MinimumCompressionSize: Integer",
+      "    Mode: String",
+      "    Models: Map",
+      "    Name: String",
+      "    OpenApiVersion: String",
+      "    StageName: String # Required: Yes",
+      "    Tags: Map",
+      "    TracingEnabled: Boolean",
+      "    Variables: Map"
+    ]
+  }
+}

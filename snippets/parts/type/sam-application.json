@@ -1,0 +1,16 @@
+{
+  "AWS::Serverless::Application": {
+    "prefix": "sam-application",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-application.html",
+    "body": [
+      "${1:ServerlessApplication}:",
+      "  Type: AWS::Serverless::Application",
+      "  Properties:",
+      "    Location: String | ApplicationLocationObject #Required",
+      "    NotificationARNs: List",
+      "    Parameters: Map",
+      "    Tags: Map",
+      "    TimeoutInMinutes: Integer"
+    ]
+  }
+}

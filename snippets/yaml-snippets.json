@@ -1,8 +1,78 @@
 {
-  "sam-lambda-function": {
-    "prefix": "sam-lambda-function",
+  "AWS::Serverless::HttpApi": {
+    "prefix": "sam-http-api-gateway",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-httpapi.html",
     "body": [
-      "${1:SAMLambdaFunction}:",
+      "${1:SampleHttpApi}:",
+      "  Type: AWS::Serverless::HttpApi",
+      "  Properties:",
+      "    AccessLogSettings: AccessLogSettings",
+      "    Auth: HttpApiAuth",
+      "    CorsConfiguration: String | HttpApiCorsConfiguration",
+      "    DefaultRouteSettings: RouteSettings",
+      "    DefinitionBody: String",
+      "    DefinitionUri: String | HttpApiDefinition",
+      "    Description: String",
+      "    DisableExecuteApiEndpoint: Boolean",
+      "    Domain: HttpApiDomainConfiguration",
+      "    FailOnWarnings: Boolean",
+      "    RouteSettings: RouteSettings",
+      "    StageName: String",
+      "    StageVariables: Json",
+      "    Tags: Map"
+    ]
+  },
+  "AWS::Serverless::Api": {
+    "prefix": "sam-api-gateway",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-api.html",
+    "body": [
+      "${1:SampleApi}:",
+      "  Type: AWS::Serverless::Api",
+      "  Properties:",
+      "    AccessLogSetting: AccessLogSetting",
+      "    Auth: ApiAuth",
+      "    BinaryMediaTypes: List",
+      "    CacheClusterEnabled: Boolean",
+      "    CacheClusterSize: String",
+      "    CanarySetting: CanarySetting",
+      "    Cors: String | CorsConfiguration",
+      "    DefinitionBody: String",
+      "    DefinitionUri: String | ApiDefinition",
+      "    Description: String",
+      "    Domain: DomainConfiguration",
+      "    EndpointConfiguration: EndpointConfiguration",
+      "    GatewayResponses: Map",
+      "    MethodSettings: MethodSettings",
+      "    MinimumCompressionSize: Integer",
+      "    Mode: String",
+      "    Models: Map",
+      "    Name: String",
+      "    OpenApiVersion: String",
+      "    StageName: String # Required: Yes",
+      "    Tags: Map",
+      "    TracingEnabled: Boolean",
+      "    Variables: Map"
+    ]
+  },
+  "AWS::Serverless::SimpleTable": {
+    "prefix": "sam-dynamodb",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-simpletable.html",
+    "body": [
+      "${1:SampleDynamoTable}:",
+      "  Type: AWS::Serverless::SimpleTable",
+      "  Properties:",
+      "    PrimaryKey: PrimaryKeyObject",
+      "    ProvisionedThroughput: ProvisionedThroughput",
+      "    SSESpecification: SSESpecification",
+      "    TableName: String",
+      "    Tags: Map"
+    ]
+  },
+  "AWS::Serverless::Function": {
+    "prefix": "sam-lambda-function",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html",
+    "body": [
+      "${1:LambdaFunction}:",
       "  Type: AWS::Serverless::Function",
       "  Properties:",
       "    Architectures: List",
@@ -38,6 +108,57 @@
       "    Tracing: String",
       "    VersionDescription: String",
       "    VpcConfig: VpcConfig"
+    ]
+  },
+  "AWS::Serverless::LayerVersion": {
+    "prefix": "sam-layer",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-layerversion.html",
+    "body": [
+      "${1:SampleLayer}:",
+      "  Type: AWS::Serverless::LayerVersion",
+      "  Properties:",
+      "    CompatibleArchitectures: List",
+      "    CompatibleRuntimes: List",
+      "    ContentUri: String | LayerContent # Required: Yes",
+      "    Description: String",
+      "    LayerName: String",
+      "    LicenseInfo: String",
+      "    RetentionPolicy: String"
+    ]
+  },
+  "AWS::Serverless::Application": {
+    "prefix": "sam-application",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-application.html",
+    "body": [
+      "${1:ServerlessApplication}:",
+      "  Type: AWS::Serverless::Application",
+      "  Properties:",
+      "    Location: String | ApplicationLocationObject #Required",
+      "    NotificationARNs: List",
+      "    Parameters: Map",
+      "    Tags: Map",
+      "    TimeoutInMinutes: Integer"
+    ]
+  },
+  "AWS::Serverless::StateMachine": {
+    "prefix": "sam-step-functions",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html",
+    "body": [
+      "${1:SampleStepFunctions}:",
+      "  Type: AWS::Serverless::StateMachine",
+      "  Properties:",
+      "    Definition: Map",
+      "    DefinitionSubstitutions: Map",
+      "    DefinitionUri: String | S3Location",
+      "    Events: EventSource",
+      "    Logging: LoggingConfiguration",
+      "    Name: String",
+      "    PermissionsBoundary: String",
+      "    Policies: String | List | Map",
+      "    Role: String",
+      "    Tags: Map",
+      "    Tracing: TracingConfiguration",
+      "    Type: String"
     ]
   }
 }

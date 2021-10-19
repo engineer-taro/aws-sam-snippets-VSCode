@@ -1,0 +1,16 @@
+{
+  "AWS::Serverless::SimpleTable": {
+    "prefix": "sam-dynamodb",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-simpletable.html",
+    "body": [
+      "${1:SampleDynamoTable}:",
+      "  Type: AWS::Serverless::SimpleTable",
+      "  Properties:",
+      "    PrimaryKey: PrimaryKeyObject",
+      "    ProvisionedThroughput: ProvisionedThroughput",
+      "    SSESpecification: SSESpecification",
+      "    TableName: String",
+      "    Tags: Map"
+    ]
+  }
+}

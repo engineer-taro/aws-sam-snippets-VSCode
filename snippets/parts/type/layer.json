@@ -1,0 +1,18 @@
+{
+  "AWS::Serverless::LayerVersion": {
+    "prefix": "sam-layer",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-layerversion.html",
+    "body": [
+      "${1:SampleLayer}:",
+      "  Type: AWS::Serverless::LayerVersion",
+      "  Properties:",
+      "    CompatibleArchitectures: List",
+      "    CompatibleRuntimes: List",
+      "    ContentUri: String | LayerContent # Required: Yes",
+      "    Description: String",
+      "    LayerName: String",
+      "    LicenseInfo: String",
+      "    RetentionPolicy: String"
+    ]
+  }
+}

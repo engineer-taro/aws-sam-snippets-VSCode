@@ -1,0 +1,23 @@
+{
+  "AWS::Serverless::StateMachine": {
+    "prefix": "sam-step-functions",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-statemachine.html",
+    "body": [
+      "${1:SampleStepFunctions}:",
+      "  Type: AWS::Serverless::StateMachine",
+      "  Properties:",
+      "    Definition: Map",
+      "    DefinitionSubstitutions: Map",
+      "    DefinitionUri: String | S3Location",
+      "    Events: EventSource",
+      "    Logging: LoggingConfiguration",
+      "    Name: String",
+      "    PermissionsBoundary: String",
+      "    Policies: String | List | Map",
+      "    Role: String",
+      "    Tags: Map",
+      "    Tracing: TracingConfiguration",
+      "    Type: String"
+    ]
+  }
+}
