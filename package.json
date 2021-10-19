@@ -1,0 +1,35 @@
+{
+  "name": "aws-sam-snippets",
+  "displayName": "AWS SAM Template Snippets",
+  "description": "AWS SAM Template snippets excluding CloudFormation.",
+  "version": "1.0.0",
+  "publisher": "engineer-taro",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.9.1"
+  },
+  "galleryBanner": {
+    "color": "#1E81C1",
+    "theme": "light"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "yaml",
+        "path": "./snippets/yaml-snippets.json"
+      }
+    ]
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/engineer-taro/aws-sam-snippets-VSCode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/engineer-taro/aws-sam-snippets-VSCode.git"
+  },
+  "homepage": "https://github.com/engineer-taro/aws-sam-snippets-VSCode/blob/main/README.md"
+}
