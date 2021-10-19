@@ -26,7 +26,7 @@ This will be up to the property name of Properties.
 We are currently in phase 1.  
 The order in which features will be added is planned to be as follows
 
-## Phase 1
+## Phase 1 Now
 
 Add the description following Type: to the snippet.  
 This will be up to the property name of Properties.
