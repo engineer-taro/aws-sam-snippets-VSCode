@@ -4,7 +4,7 @@
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-api.html",
     "body": [
       "Events:",
-      "  ${1:ApiEvent}",
+      "  ${1:ApiEvent}:",
       "    Type: Api:",
       "    Properties:",
       "      Auth: ApiFunctionAuth",

@@ -1,0 +1,13 @@
+{
+  "Events: AlexaSlill": {
+    "prefix": "sam-event-alexa-skill",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-alexaskill.html",
+    "body": [
+      "Events:",
+      "  ${1:AlexaSkillEvent}:",
+      "    Type: AlexaSkill",
+      "    Properties:",
+      "      SkillId: String"
+    ]
+  }
+}

@@ -1,18 +1,55 @@
 {
+  "Events: AlexaSlill": {
+    "prefix": "sam-event-alexa-skill",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-alexaskill.html",
+    "body": [
+      "Events:",
+      "  ${1:AlexaSkillEvent}:",
+      "    Type: AlexaSkill",
+      "    Properties:",
+      "      SkillId: String"
+    ]
+  },
   "Events: ApiEvent": {
     "prefix": "sam-event-source-api",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-api.html",
     "body": [
       "Events:",
-      "  ${1:ApiEvent}",
-      "    Type: Api",
+      "  ${1:ApiEvent}:",
+      "    Type: Api:",
       "    Properties:",
       "      Auth: ApiFunctionAuth",
-      "      Method: String",
-      "      Path: String",
+      "      Method: String # Required: Yes",
+      "      Path: String # Required: Yes",
       "      RequestModel: RequestModel",
       "      RequestParameters: String | RequestParameter",
       "      RestApiId: String"
+    ]
+  },
+  "Events: CloudWatchEvent": {
+    "prefix": "sam-event-cloud-watch-event",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-cloudwatchevent.html",
+    "body": [
+      "Events:",
+      "  ${1:CWEvent}:",
+      "    Type: Api:",
+      "    Properties:",
+      "      EventBusName: String",
+      "      Input: String",
+      "      InputPath: String",
+      "      Pattern: EventPattern # Required: Yes"
+    ]
+  },
+  "Events: CloudWatchLogs": {
+    "prefix": "sam-event-cloud-watch-logs",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-cloudwatchlogs.html",
+    "body": [
+      "Events:",
+      "  ${1:CWLog}:",
+      "    Type: CloudWatchLogs:",
+      "    Properties:",
+      "      FilterPattern: String # Required: Yes",
+      "      LogGroupName: String # Required: Yes"
     ]
   },
   "AWS::Serverless::HttpApi": {

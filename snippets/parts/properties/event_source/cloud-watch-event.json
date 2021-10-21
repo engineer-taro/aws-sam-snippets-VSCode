@@ -1,0 +1,16 @@
+{
+  "Events: CloudWatchEvent": {
+    "prefix": "sam-event-cloud-watch-event",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-cloudwatchevent.html",
+    "body": [
+      "Events:",
+      "  ${1:CWEvent}:",
+      "    Type: Api:",
+      "    Properties:",
+      "      EventBusName: String",
+      "      Input: String",
+      "      InputPath: String",
+      "      Pattern: EventPattern # Required: Yes"
+    ]
+  }
+}
