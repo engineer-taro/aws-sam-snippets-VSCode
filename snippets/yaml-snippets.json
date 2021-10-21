@@ -1,4 +1,20 @@
 {
+  "Events: ApiEvent": {
+    "prefix": "sam-event-source-api",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-api.html",
+    "body": [
+      "Events:",
+      "  ${1:ApiEvent}",
+      "    Type: Api",
+      "    Properties:",
+      "      Auth: ApiFunctionAuth",
+      "      Method: String",
+      "      Path: String",
+      "      RequestModel: RequestModel",
+      "      RequestParameters: String | RequestParameter",
+      "      RestApiId: String"
+    ]
+  },
   "AWS::Serverless::HttpApi": {
     "prefix": "sam-http-api-gateway",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-httpapi.html",
