@@ -1,0 +1,15 @@
+{
+  "Events: S3Event": {
+    "prefix": "sam-event-source-s3",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-s3.html",
+    "body": [
+      "Events:",
+      "  ${1:S3Event}:",
+      "    Type: S3",
+      "    Properties:",
+      "      Bucket: String # Required: Yes",
+      "      Events: String | List # Required: Yes",
+      "      Filter: NotificationFilter"
+    ]
+  }
+}

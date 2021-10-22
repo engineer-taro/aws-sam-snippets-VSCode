@@ -1,0 +1,16 @@
+{
+  "Events: SNSEvent": {
+    "prefix": "sam-event-source-sns",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-sns.html",
+    "body": [
+      "Events:",
+      "  ${1:SNSEvent}:",
+      "    Type: SNS",
+      "    Properties:",
+      "      FilterPolicy: SnsFilterPolicy",
+      "      Region: String",
+      "      SqsSubscription: Boolean | SqsSubscriptionObject",
+      "      Topic: String # Required: Yes"
+    ]
+  }
+}

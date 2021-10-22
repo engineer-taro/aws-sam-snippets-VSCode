@@ -1,0 +1,19 @@
+{
+  "Events: HttpApiEvent": {
+    "prefix": "sam-event-source-http-api",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-httpapi.html",
+    "body": [
+      "Events:",
+      "  ${1:HttpApiEvent}:",
+      "    Type: HttpApi:",
+      "    Properties:",
+      "      ApiId: String",
+      "      Auth: HttpApiFunctionAuth",
+      "      Method: String",
+      "      Path: String",
+      "      PayloadFormatVersion: String",
+      "      RouteSettings: RouteSettings",
+      "      TimeoutInMillis: Integer"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Events: SQSEvent": {
+    "prefix": "sam-event-source-sqs",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-sqs.html",
+    "body": [
+      "Events:",
+      "  ${1:SQSEvent}:",
+      "    Type: SQS",
+      "    Properties:",
+      "      BatchSize: Integer",
+      "      Enabled: Boolean",
+      "      MaximumBatchingWindowInSeconds: Integer",
+      "      Queue: String # Required: Yes"
+    ]
+  }
+}

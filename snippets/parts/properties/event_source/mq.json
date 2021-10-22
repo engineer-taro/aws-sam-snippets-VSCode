@@ -1,0 +1,18 @@
+{
+  "Events: MQEvent": {
+    "prefix": "sam-event-source-mq",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-mq.html",
+    "body": [
+      "Events:",
+      "  ${1:KinesisEvent}:",
+      "    Type: Kinesis",
+      "    Properties:",
+      "      BatchSize: Integer",
+      "      Broker: String # Required: Yes",
+      "      Enabled: Boolean",
+      "      Queues: List # Required: Yes",
+      "      SecretsManagerKmsKeyId: String",
+      "      SourceAccessConfigurations: List # Required: Yes"
+    ]
+  }
+}

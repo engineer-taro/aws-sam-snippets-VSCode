@@ -1,0 +1,19 @@
+{
+  "Events: ScheduleEvent": {
+    "prefix": "sam-event-source-schedule",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-schedule.html",
+    "body": [
+      "Events:",
+      "  ${1:CWSchedule}:",
+      "    Type: Schedule",
+      "    Properties:",
+      "      DeadLetterConfig: DeadLetterConfig",
+      "      Description: String",
+      "      Enabled: Boolean",
+      "      Input: String",
+      "      Name: String",
+      "      RetryPolicy: RetryPolicy",
+      "      Schedule: String # Required: Yes"
+    ]
+  }
+}

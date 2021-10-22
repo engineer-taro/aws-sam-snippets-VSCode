@@ -1,0 +1,15 @@
+{
+  "Events: MSKEvent": {
+    "prefix": "sam-event-source-msk",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-msk.html",
+    "body": [
+      "Events:",
+      "  ${1:MSKEvent}:",
+      "    Type: MSK",
+      "    Properties:",
+      "      StartingPosition: String # Required: Yes",
+      "      Stream: String # Required: Yes",
+      "      Topics: List # Required: Yes"
+    ]
+  }
+}
