@@ -1,0 +1,14 @@
+{
+  "Events: CognitoEvent": {
+    "prefix": "sam-event-source-cognito",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-cognito.html",
+    "body": [
+      "Events:",
+      "  ${1:CognitoUserPoolPreSignup}:",
+      "    Type: Cognito:",
+      "    Properties:",
+      "      Trigger: List # Required: Yes",
+      "      UserPool: String # Required: Yes"
+    ]
+  }
+}
