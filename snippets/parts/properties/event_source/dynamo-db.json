@@ -1,0 +1,24 @@
+{
+  "Events: DynamoDBEvent": {
+    "prefix": "sam-event-source-dynamo-db",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-dynamodb.html",
+    "body": [
+      "Events:",
+      "  ${1:DDBEvent}:",
+      "    Type: DynamoDB:",
+      "    Properties:",
+      "      BatchSize: Integer",
+      "      BisectBatchOnFunctionError: Boolean",
+      "      DestinationConfig: DestinationConfig",
+      "      Enabled: Boolean",
+      "      FunctionResponseTypes: List",
+      "      MaximumBatchingWindowInSeconds: Integer",
+      "      MaximumRecordAgeInSeconds: Integer",
+      "      MaximumRetryAttempts: Integer",
+      "      ParallelizationFactor: Integer",
+      "      StartingPosition: String",
+      "      Stream: String # Required: Yes",
+      "      TumblingWindowInSeconds: Integer"
+    ]
+  }
+}
