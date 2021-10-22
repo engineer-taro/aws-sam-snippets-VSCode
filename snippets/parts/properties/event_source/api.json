@@ -5,7 +5,7 @@
     "body": [
       "Events:",
       "  ${1:ApiEvent}:",
-      "    Type: Api:",
+      "    Type: Api",
       "    Properties:",
       "      Auth: ApiFunctionAuth",
       "      Method: String # Required: Yes",

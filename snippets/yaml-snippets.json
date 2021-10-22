@@ -16,7 +16,7 @@
     "body": [
       "Events:",
       "  ${1:ApiEvent}:",
-      "    Type: Api:",
+      "    Type: Api",
       "    Properties:",
       "      Auth: ApiFunctionAuth",
       "      Method: String # Required: Yes",
@@ -32,7 +32,7 @@
     "body": [
       "Events:",
       "  ${1:CWEvent}:",
-      "    Type: Api:",
+      "    Type: CloudWatchEvent",
       "    Properties:",
       "      EventBusName: String",
       "      Input: String",
@@ -46,7 +46,7 @@
     "body": [
       "Events:",
       "  ${1:CWLog}:",
-      "    Type: CloudWatchLogs:",
+      "    Type: CloudWatchLogs",
       "    Properties:",
       "      FilterPattern: String # Required: Yes",
       "      LogGroupName: String # Required: Yes"
@@ -58,7 +58,7 @@
     "body": [
       "Events:",
       "  ${1:CognitoUserPoolPreSignup}:",
-      "    Type: Cognito:",
+      "    Type: Cognito",
       "    Properties:",
       "      Trigger: List # Required: Yes",
       "      UserPool: String # Required: Yes"
@@ -70,7 +70,7 @@
     "body": [
       "Events:",
       "  ${1:DDBEvent}:",
-      "    Type: DynamoDB:",
+      "    Type: DynamoDB",
       "    Properties:",
       "      BatchSize: Integer",
       "      BisectBatchOnFunctionError: Boolean",
@@ -92,7 +92,7 @@
     "body": [
       "Events:",
       "  ${1:EBRule}:",
-      "    Type: EventBridgeRule:",
+      "    Type: EventBridgeRule",
       "    Properties:",
       "      DeadLetterConfig: DeadLetterConfig",
       "      EventBusName: String",
@@ -109,7 +109,7 @@
     "body": [
       "Events:",
       "  ${1:HttpApiEvent}:",
-      "    Type: HttpApi:",
+      "    Type: HttpApi",
       "    Properties:",
       "      ApiId: String",
       "      Auth: HttpApiFunctionAuth",
@@ -126,7 +126,7 @@
     "body": [
       "Events:",
       "  ${1:IoTRule}:",
-      "    Type: IoTRule:",
+      "    Type: IoTRule",
       "    Properties:",
       "      AwsIotSqlVersion: String",
       "      Sql: String # Required: Yes"
@@ -160,7 +160,7 @@
     "body": [
       "Events:",
       "  ${1:KinesisEvent}:",
-      "    Type: Kinesis",
+      "    Type: MQ",
       "    Properties:",
       "      BatchSize: Integer",
       "      Broker: String # Required: Yes",

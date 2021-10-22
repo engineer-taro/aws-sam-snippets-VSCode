@@ -5,7 +5,7 @@
     "body": [
       "Events:",
       "  ${1:CWLog}:",
-      "    Type: CloudWatchLogs:",
+      "    Type: CloudWatchLogs",
       "    Properties:",
       "      FilterPattern: String # Required: Yes",
       "      LogGroupName: String # Required: Yes"

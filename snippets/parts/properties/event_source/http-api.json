@@ -5,7 +5,7 @@
     "body": [
       "Events:",
       "  ${1:HttpApiEvent}:",
-      "    Type: HttpApi:",
+      "    Type: HttpApi",
       "    Properties:",
       "      ApiId: String",
       "      Auth: HttpApiFunctionAuth",

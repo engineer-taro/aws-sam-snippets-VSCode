@@ -12,6 +12,11 @@
 Type: に続く記述をスニペットに追加。
 Properties のプロパティ名までを対象とする。
 
+## 2.0.0
+![use-event-sample.gif](images/use-event-sample.gif) 
+EventSourceのサポート。  
+`sam-event`から続く文字列でスニペットを表示。
+
 # 使用方法
 
 ![use-sample.gif](images/use-sample.gif)
@@ -30,8 +35,9 @@ Type: に続く記述をスニペットに追加。
 Properties のプロパティ名までを対象とする。
 
 ## フェーズ 2 Now
+sam-property-function-eventsource.html)など、頻繁に記述するものを対象にする。
 
-[EventSource](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-eventsource.html)など、頻繁に記述するものを対象にする。
+[EventSource](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/
 
 ## フェーズ 3
 

@@ -21,6 +21,13 @@ First release.
 Add the description following Type: to the snippet.  
 This will be up to the property name of Properties.
 
+## 2.0.0
+Support for EventSource.  
+Show snippets with `sam-event` followed by a string.
+
+
+![use-event-sample.gif](images/use-event-sample.gif) 
+
 # About the progress of development
 
 We are currently in phase 1.  
@@ -32,7 +39,6 @@ Add the description following Type: to the snippet.
 This will be up to the property name of Properties.
 
 ## Phase 2 Now
-
 [EventSource](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-eventsource. html) and other frequently used snippets.
 
 ## Phase 3

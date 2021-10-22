@@ -5,7 +5,7 @@
     "body": [
       "Events:",
       "  ${1:KinesisEvent}:",
-      "    Type: Kinesis",
+      "    Type: MQ",
       "    Properties:",
       "      BatchSize: Integer",
       "      Broker: String # Required: Yes",
