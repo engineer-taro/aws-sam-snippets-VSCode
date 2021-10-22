@@ -1,6 +1,6 @@
 {
   "Events: ApiEvent": {
-    "prefix": "sam-event-source-api",
+    "prefix": "sam-event-api",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-api.html",
     "body": [
       "Events:",

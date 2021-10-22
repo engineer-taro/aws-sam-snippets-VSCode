@@ -26,12 +26,12 @@ This will be up to the property name of Properties.
 We are currently in phase 1.  
 The order in which features will be added is planned to be as follows
 
-## Phase 1 Now
+## Phase 1
 
 Add the description following Type: to the snippet.  
 This will be up to the property name of Properties.
 
-## Phase 2
+## Phase 2 Now
 
 [EventSource](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-eventsource. html) and other frequently used snippets.
 

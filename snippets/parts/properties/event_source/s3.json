@@ -1,6 +1,6 @@
 {
   "Events: S3Event": {
-    "prefix": "sam-event-source-s3",
+    "prefix": "sam-event-s3",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-s3.html",
     "body": [
       "Events:",

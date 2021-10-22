@@ -11,7 +11,7 @@
     ]
   },
   "Events: ApiEvent": {
-    "prefix": "sam-event-source-api",
+    "prefix": "sam-event-api",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-api.html",
     "body": [
       "Events:",
@@ -50,6 +50,195 @@
       "    Properties:",
       "      FilterPattern: String # Required: Yes",
       "      LogGroupName: String # Required: Yes"
+    ]
+  },
+  "Events: CognitoEvent": {
+    "prefix": "sam-event-cognito",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-cognito.html",
+    "body": [
+      "Events:",
+      "  ${1:CognitoUserPoolPreSignup}:",
+      "    Type: Cognito:",
+      "    Properties:",
+      "      Trigger: List # Required: Yes",
+      "      UserPool: String # Required: Yes"
+    ]
+  },
+  "Events: DynamoDBEvent": {
+    "prefix": "sam-event-dynamo-db",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-dynamodb.html",
+    "body": [
+      "Events:",
+      "  ${1:DDBEvent}:",
+      "    Type: DynamoDB:",
+      "    Properties:",
+      "      BatchSize: Integer",
+      "      BisectBatchOnFunctionError: Boolean",
+      "      DestinationConfig: DestinationConfig",
+      "      Enabled: Boolean",
+      "      FunctionResponseTypes: List",
+      "      MaximumBatchingWindowInSeconds: Integer",
+      "      MaximumRecordAgeInSeconds: Integer",
+      "      MaximumRetryAttempts: Integer",
+      "      ParallelizationFactor: Integer",
+      "      StartingPosition: String",
+      "      Stream: String # Required: Yes",
+      "      TumblingWindowInSeconds: Integer"
+    ]
+  },
+  "Events: EventBridgeRuleEvent": {
+    "prefix": "sam-event-event-bridge-rule",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-eventbridgerule.html",
+    "body": [
+      "Events:",
+      "  ${1:EBRule}:",
+      "    Type: EventBridgeRule:",
+      "    Properties:",
+      "      DeadLetterConfig: DeadLetterConfig",
+      "      EventBusName: String",
+      "      Input: String",
+      "      InputPath: String",
+      "      Pattern: EventPattern # Required: Yes",
+      "      RetryPolicy: RetryPolicy",
+      "      Target: Target"
+    ]
+  },
+  "Events: HttpApiEvent": {
+    "prefix": "sam-event-http-api",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-httpapi.html",
+    "body": [
+      "Events:",
+      "  ${1:HttpApiEvent}:",
+      "    Type: HttpApi:",
+      "    Properties:",
+      "      ApiId: String",
+      "      Auth: HttpApiFunctionAuth",
+      "      Method: String",
+      "      Path: String",
+      "      PayloadFormatVersion: String",
+      "      RouteSettings: RouteSettings",
+      "      TimeoutInMillis: Integer"
+    ]
+  },
+  "Events: IoTRuleEvent": {
+    "prefix": "sam-event-iot-rule",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-iotrule.html",
+    "body": [
+      "Events:",
+      "  ${1:IoTRule}:",
+      "    Type: IoTRule:",
+      "    Properties:",
+      "      AwsIotSqlVersion: String",
+      "      Sql: String # Required: Yes"
+    ]
+  },
+  "Events: KinesisEvent": {
+    "prefix": "sam-event-kinesis",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-kinesis.html",
+    "body": [
+      "Events:",
+      "  ${1:KinesisEvent}:",
+      "    Type: Kinesis",
+      "    Properties:",
+      "      BatchSize: Integer",
+      "      BisectBatchOnFunctionError: Boolean",
+      "      DestinationConfig: DestinationConfig",
+      "      Enabled: Boolean",
+      "      FunctionResponseTypes: List",
+      "      MaximumBatchingWindowInSeconds: Integer",
+      "      MaximumRecordAgeInSeconds: Integer",
+      "      MaximumRetryAttempts: Integer",
+      "      ParallelizationFactor: Integer",
+      "      StartingPosition: String # Required: Yes",
+      "      Stream: String # Required: Yes",
+      "      TumblingWindowInSeconds: Integer"
+    ]
+  },
+  "Events: MQEvent": {
+    "prefix": "sam-event-mq",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-mq.html",
+    "body": [
+      "Events:",
+      "  ${1:KinesisEvent}:",
+      "    Type: Kinesis",
+      "    Properties:",
+      "      BatchSize: Integer",
+      "      Broker: String # Required: Yes",
+      "      Enabled: Boolean",
+      "      Queues: List # Required: Yes",
+      "      SecretsManagerKmsKeyId: String",
+      "      SourceAccessConfigurations: List # Required: Yes"
+    ]
+  },
+  "Events: MSKEvent": {
+    "prefix": "sam-event-msk",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-msk.html",
+    "body": [
+      "Events:",
+      "  ${1:MSKEvent}:",
+      "    Type: MSK",
+      "    Properties:",
+      "      StartingPosition: String # Required: Yes",
+      "      Stream: String # Required: Yes",
+      "      Topics: List # Required: Yes"
+    ]
+  },
+  "Events: S3Event": {
+    "prefix": "sam-event-s3",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-s3.html",
+    "body": [
+      "Events:",
+      "  ${1:S3Event}:",
+      "    Type: S3",
+      "    Properties:",
+      "      Bucket: String # Required: Yes",
+      "      Events: String | List # Required: Yes",
+      "      Filter: NotificationFilter"
+    ]
+  },
+  "Events: ScheduleEvent": {
+    "prefix": "sam-event-schedule",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-schedule.html",
+    "body": [
+      "Events:",
+      "  ${1:CWSchedule}:",
+      "    Type: Schedule",
+      "    Properties:",
+      "      DeadLetterConfig: DeadLetterConfig",
+      "      Description: String",
+      "      Enabled: Boolean",
+      "      Input: String",
+      "      Name: String",
+      "      RetryPolicy: RetryPolicy",
+      "      Schedule: String # Required: Yes"
+    ]
+  },
+  "Events: SNSEvent": {
+    "prefix": "sam-event-sns",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-sns.html",
+    "body": [
+      "Events:",
+      "  ${1:SNSEvent}:",
+      "    Type: SNS",
+      "    Properties:",
+      "      FilterPolicy: SnsFilterPolicy",
+      "      Region: String",
+      "      SqsSubscription: Boolean | SqsSubscriptionObject",
+      "      Topic: String # Required: Yes"
+    ]
+  },
+  "Events: SQSEvent": {
+    "prefix": "sam-event-sqs",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-sqs.html",
+    "body": [
+      "Events:",
+      "  ${1:SQSEvent}:",
+      "    Type: SQS",
+      "    Properties:",
+      "      BatchSize: Integer",
+      "      Enabled: Boolean",
+      "      MaximumBatchingWindowInSeconds: Integer",
+      "      Queue: String # Required: Yes"
     ]
   },
   "AWS::Serverless::HttpApi": {

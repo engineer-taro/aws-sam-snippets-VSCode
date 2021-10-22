@@ -1,6 +1,6 @@
 {
   "Events: MQEvent": {
-    "prefix": "sam-event-source-mq",
+    "prefix": "sam-event-mq",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-mq.html",
     "body": [
       "Events:",

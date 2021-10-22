@@ -1,6 +1,6 @@
 {
   "Events: ScheduleEvent": {
-    "prefix": "sam-event-source-schedule",
+    "prefix": "sam-event-schedule",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-schedule.html",
     "body": [
       "Events:",

@@ -29,7 +29,7 @@ Properties のプロパティ名までを対象とする。
 Type: に続く記述をスニペットに追加。
 Properties のプロパティ名までを対象とする。
 
-## フェーズ 2
+## フェーズ 2 Now
 
 [EventSource](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-eventsource.html)など、頻繁に記述するものを対象にする。
 

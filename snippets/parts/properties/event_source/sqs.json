@@ -1,6 +1,6 @@
 {
   "Events: SQSEvent": {
-    "prefix": "sam-event-source-sqs",
+    "prefix": "sam-event-sqs",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-sqs.html",
     "body": [
       "Events:",

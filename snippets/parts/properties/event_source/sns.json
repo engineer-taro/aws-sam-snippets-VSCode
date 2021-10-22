@@ -1,6 +1,6 @@
 {
   "Events: SNSEvent": {
-    "prefix": "sam-event-source-sns",
+    "prefix": "sam-event-sns",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-sns.html",
     "body": [
       "Events:",
