@@ -1,0 +1,19 @@
+{
+  "Events: EventBridgeRuleEvent": {
+    "prefix": "sam-event-source-event-bridge-rule",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-eventbridgerule.html",
+    "body": [
+      "Events:",
+      "  ${1:EBRule}:",
+      "    Type: EventBridgeRule:",
+      "    Properties:",
+      "      DeadLetterConfig: DeadLetterConfig",
+      "      EventBusName: String",
+      "      Input: String",
+      "      InputPath: String",
+      "      Pattern: EventPattern # Required: Yes",
+      "      RetryPolicy: RetryPolicy",
+      "      Target: Target"
+    ]
+  }
+}
