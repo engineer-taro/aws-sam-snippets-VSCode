@@ -1,6 +1,6 @@
 {
-  "Events: EventBridgeRule": {
-    "prefix": "sam-event-event-bridge-rule",
+  "Events: EventBridgeRuleStepFunction": {
+    "prefix": "sam-event-event-bridge-rule-step-function",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-eventbridgerule.html",
     "body": [
       "Events:",
@@ -12,8 +12,7 @@
       "      Input: String",
       "      InputPath: String",
       "      Pattern: EventPattern # Required: Yes",
-      "      RetryPolicy: RetryPolicy",
-      "      Target: Target"
+      "      RetryPolicy: RetryPolicy"
     ]
   }
 }

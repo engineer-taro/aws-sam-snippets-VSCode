@@ -1,0 +1,16 @@
+{
+  "Events: ApiEventStepFunction": {
+    "prefix": "sam-event-api-step-function",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-statemachine-statemachineapi.html",
+    "body": [
+      "Events:",
+      "  ${1:ApiEvent}:",
+      "    Type: Api",
+      "    Properties:",
+      "      Auth: ApiStateMachineAuth",
+      "      Method: String # Required: Yes",
+      "      Path: String # Required: Yes",
+      "      RestApiId: String"
+    ]
+  }
+}
