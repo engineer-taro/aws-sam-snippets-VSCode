@@ -1,4 +1,110 @@
 {
+  "Base": {
+    "prefix": "sam",
+    "description": "Sam base template.",
+    "body": [
+      "Transform: AWS::Serverless-2016-10-31",
+      "Globals:",
+      "  set of globals",
+      "Description: >",
+      "  String",
+      "Metadata:",
+      "  template metadata",
+      "Parameters:",
+      "  set of parameters",
+      "Mappings:",
+      "  set of mappings",
+      "Conditions:",
+      "  set of conditions",
+      "Resources:",
+      "  set of resources",
+      "Outputs:",
+      "  set of outputs"
+    ]
+  },
+  "FunctionCode": {
+    "prefix": "sam-function-code",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-functioncode.html",
+    "body": [
+      "FunctionCode:",
+      "  Bucket: String",
+      "  Key: String # Required: Yes",
+      "  Version: String # Required: Yes"
+    ]
+  },
+  "ApiAuth: ApiUsagePlan": {
+    "prefix": "sam-api-usage-plan",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-apiusageplan.html",
+    "body": [
+      "Auth:",
+      "  UsagePlan:",
+      "    CreateUsagePlan: String # Required: Yes",
+      "    Description: String",
+      "    Quota: QuotaSettings",
+      "    Tags: List",
+      "    Throttle: ThrottleSettings",
+      "    UsagePlanName: String"
+    ]
+  },
+  "ApiAuth: CognitoAuthorizer": {
+    "prefix": "sam-api-cognito-authorizer",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-cognitoauthorizer.html",
+    "body": [
+      "Auth:",
+      "  Authorizers:",
+      "    MyCognitoAuth:",
+      "      AuthorizationScopes: List",
+      "      Identity: CognitoAuthorizationIdentity",
+      "      UserPoolArn: String # Required: Yes"
+    ]
+  },
+  "ApiAuth: LambdaRequestAuthorizer": {
+    "prefix": "sam-api-lambda-request-authorizer",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-lambdarequestauthorizer.html",
+    "body": [
+      "Auth:",
+      "  Authorizer:",
+      "    MyLambdaRequestAuth:",
+      "      AuthorizationScopes: List",
+      "      FunctionArn: String # Required: Yes",
+      "      FunctionInvokeRole: String",
+      "      FunctionPayloadType: String",
+      "      Identity: LambdaRequestAuthorizationIdentity"
+    ]
+  },
+  "ApiAuth: LambdaTokenAuthorizer": {
+    "prefix": "sam-api-lambda-token-authorizer",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-lambdatokenauthorizer.html",
+    "body": [
+      "Auth:",
+      "  Authorizers:",
+      "    MyLambdaTokenAuth:",
+      "      AuthorizationScopes: List",
+      "      FunctionArn: String # Required: Yes",
+      "      FunctionInvokeRole: String",
+      "      FunctionPayloadType: String",
+      "      Identity: LambdaTokenAuthorizationIdentity"
+    ]
+  },
+  "ApiAuth: ResourcePolicyStatement": {
+    "prefix": "sam-api-resouce-policy-statement",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-resourcepolicystatement.html",
+    "body": [
+      "Auth:",
+      "  ResourcePolicy:",
+      "    AwsAccountBlacklist: List",
+      "    AwsAccountWhitelist: List",
+      "    CustomStatements: List",
+      "    IntrinsicVpcBlacklist: List",
+      "    IntrinsicVpcWhitelist: List",
+      "    IntrinsicVpceBlacklist: List",
+      "    IntrinsicVpceWhitelist: List",
+      "    IpRangeBlacklist: List",
+      "    IpRangeWhitelist: List",
+      "    SourceVpcBlacklist: List",
+      "    SourceVpcWhitelist: List"
+    ]
+  },
   "Events: AlexaSlill": {
     "prefix": "sam-event-alexa-skill",
     "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-alexaskill.html",

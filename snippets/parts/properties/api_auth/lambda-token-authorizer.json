@@ -1,0 +1,16 @@
+{
+  "ApiAuth: LambdaTokenAuthorizer": {
+    "prefix": "sam-api-lambda-token-authorizer",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-lambdatokenauthorizer.html",
+    "body": [
+      "Auth:",
+      "  Authorizers:",
+      "    MyLambdaTokenAuth:",
+      "      AuthorizationScopes: List",
+      "      FunctionArn: String # Required: Yes",
+      "      FunctionInvokeRole: String",
+      "      FunctionPayloadType: String",
+      "      Identity: LambdaTokenAuthorizationIdentity"
+    ]
+  }
+}

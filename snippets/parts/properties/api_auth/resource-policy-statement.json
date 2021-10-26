@@ -1,0 +1,21 @@
+{
+  "ApiAuth: ResourcePolicyStatement": {
+    "prefix": "sam-api-resouce-policy-statement",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-resourcepolicystatement.html",
+    "body": [
+      "Auth:",
+      "  ResourcePolicy:",
+      "    AwsAccountBlacklist: List",
+      "    AwsAccountWhitelist: List",
+      "    CustomStatements: List",
+      "    IntrinsicVpcBlacklist: List",
+      "    IntrinsicVpcWhitelist: List",
+      "    IntrinsicVpceBlacklist: List",
+      "    IntrinsicVpceWhitelist: List",
+      "    IpRangeBlacklist: List",
+      "    IpRangeWhitelist: List",
+      "    SourceVpcBlacklist: List",
+      "    SourceVpcWhitelist: List"
+    ]
+  }
+}

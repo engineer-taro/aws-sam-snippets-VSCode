@@ -1,0 +1,14 @@
+{
+  "ApiAuth: CognitoAuthorizer": {
+    "prefix": "sam-api-cognito-authorizer",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-cognitoauthorizer.html",
+    "body": [
+      "Auth:",
+      "  Authorizers:",
+      "    MyCognitoAuth:",
+      "      AuthorizationScopes: List",
+      "      Identity: CognitoAuthorizationIdentity",
+      "      UserPoolArn: String # Required: Yes"
+    ]
+  }
+}

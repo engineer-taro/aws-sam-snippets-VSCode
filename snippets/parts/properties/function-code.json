@@ -1,0 +1,13 @@
+{
+    "FunctionCode": {
+      "prefix": "sam-function-code",
+      "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-function-functioncode.html",
+      "body": [
+        "FunctionCode:",
+        "  Bucket: String",
+        "  Key: String # Required: Yes",
+        "  Version: String # Required: Yes"
+      ]
+    }
+  }
+  

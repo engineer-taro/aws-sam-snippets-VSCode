@@ -1,0 +1,16 @@
+{
+  "ApiAuth: ApiUsagePlan": {
+    "prefix": "sam-api-usage-plan",
+    "description": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-api-apiusageplan.html",
+    "body": [
+      "Auth:",
+      "  UsagePlan:",
+      "    CreateUsagePlan: String # Required: Yes",
+      "    Description: String",
+      "    Quota: QuotaSettings",
+      "    Tags: List",
+      "    Throttle: ThrottleSettings",
+      "    UsagePlanName: String"
+    ]
+  }
+}
