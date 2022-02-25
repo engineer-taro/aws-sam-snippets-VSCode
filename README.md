@@ -11,7 +11,13 @@ Also, CloudFormation is not covered by this repository, so please use another ex
 ![use-sample.gif](images/use-sample.gif)  
 You can get a snippet by typing `sam` followed by a letter.
 
-\*To avoid conflicts with other extensions, we decided to use a string starting with `sam`.
+\*To avoid conflicts with other extensions, we decided to use a string starting with `sam`.  
+
+\*If you do not have the **RedHat YAML extension** installed, you may not be able to use this extension successfully.  
+If this is the case, please try the steps described below.
+1. uninstall AWS SAM Template Snippets
+2. install the RedHat YAML extension
+3. reinstall AWS SAM Template Snippets
 
 # Release Info
 
