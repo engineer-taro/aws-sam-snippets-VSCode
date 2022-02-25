@@ -22,7 +22,13 @@ EventSourceのサポート。
 ![use-sample.gif](images/use-sample.gif)
 `sam`から続く文字を入力することで、snippet を出すことができます。
 
-\*他の拡張機能と被らないように、sam から始まる文字列とすることにしました。
+\*他の拡張機能と被らないように、sam から始まる文字列とすることにしました。  
+
+\*RedHat YAML extension をインストールしていない場合、この拡張機能を上手く利用できないことがあります。
+その場合、以下に記載した手順を試してください。
+1. AWS SAM Template Snippets をアンインストール
+2. RedHat YAML extension をインストール
+3. AWS SAM Template Snippets を再インストール
 
 # 開発の進捗について
 
